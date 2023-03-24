@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct address {
+    char street[50];
+    char city[50];
+    char state[50];
+    int pincode;
+};
+
+struct student {
+    char name[50];
+    int rollno;
+    struct address addr;
+};
+
+int main() {
+    struct student s1 = {"John Doe", 1234, {"Main St", "New York", "NY", 10001}};
+    
+    printf("Student details:\n");
+    printf("Name: %s\n", s1.name);
+    printf("Roll number: %d\n", s1.rollno);
+    printf("Address:\n");
+    printf("Street: %s\n", s1.addr.street);
+    printf("City: %s\n", s1.addr.city);
+    printf("State: %s\n", s1.addr.state);
+    printf("Pincode: %d\n", s1.addr.pincode);
+    
+    return 0;
+}
