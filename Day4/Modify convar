@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    const int x = 10;
+    const int *ptr = &x;
+    
+    printf("Before modification: x = %d\n", x);
+    
+    
+    *ptr = 20;  // This will result in a compilation error as well
+    
+    printf("After modification: x = %d\n", x);
+    
+    return 0;
+}
